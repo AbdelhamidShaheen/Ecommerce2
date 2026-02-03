@@ -4,7 +4,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: docker/php/Dockerfile
+      dockerfile: docker/php/dockerfile
     container_name: laravel_app
     working_dir: /var/www
     volumes:
@@ -27,6 +27,7 @@ services:
     image: mysql:8.0
     container_name: laravel_db
     environment:
+    
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: laravel
       MYSQL_USER: laravel
